@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Card,
@@ -66,7 +66,7 @@ const SavedBooks = () => {
         variables: { bookId }
       });
 
-      if (!response.ok) {
+      if ( error ) {
         throw new Error('something went wrong!');
       }
 
